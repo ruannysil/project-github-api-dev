@@ -37,19 +37,28 @@ const theme = {
     danger: '#f37272',
     light: '#ecf0f1',
     dark: '#233240',
-    background: '#f37272',
+    background: '#191919',
+    container: '#2d2d2d',
     text: '#fff',
-    link: '#3498db',
+    link: '#3498bd',
 
     // Brands
-    devSamurai: '#f37272',
+    devRuan: '#f37272',
   },
   fonts: ['Open Sans', 'Arial', 'Helvetica', 'sans-serif'].join(','),
   fontSizes: {
     small: '.8rem',
-    normal: '1.2rem',
+    normal: '1.1rem',
     large: '1.3rem',
     title: '1.8rem',
+  },
+  breakpoints: {
+    xs: '0',
+    sm: '576px',
+    md: '768px',
+    lg: '992px',
+    xl: '1200px',
+    xxl: '1400px',
   },
 };
 
