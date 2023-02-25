@@ -55,7 +55,8 @@ export const Cleaner = styled.button`
   display: flex;
 
   &:hover {
-    color: rgba(255, 255, 255 0.5);
+    /* color: rgba(255, 255, 255, 0.5); */
+    color: ${(props) => props.theme.colors.devRuan};
   }
 
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {

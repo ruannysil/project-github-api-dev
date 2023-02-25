@@ -1,37 +1,53 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { MdGroup, MdLocationCity, MdWork, MdLink } from 'react-icons/md';
 import { Container, Header, Avatar, Login, Name, Inner, Data } from './style';
 
-function Profile() {
+function Profile({ user }) {
   return (
     <Container>
       <Header>
-        <Avatar src="https://avatars.githubusercontent.com/u/84647446?v=4" />
-        <Login>devuanny</Login>
-        <Name>Dev Ruanny</Name>
+        <Avatar src={user.avatar_url} />
+        <Login>{user.login}</Login>
+        <Name>{user.name}</Name>
       </Header>
       <Inner>
         <Data>
           <MdGroup size={20} />
-          30&nbsp;<i>seguidores</i>&nbsp;&middot;&nbsp;10&nbsp;<i>seguindo</i>
+          {user.following}&nbsp;<i>seguidores</i>&nbsp;&middot;&nbsp;
+          {user.followers}&nbsp;<i>seguindo</i>
         </Data>
-        <Data>
-          <MdWork size={20} />
-          Dev Ruanny
-        </Data>
-        <Data>
-          <MdLocationCity size={20} />
-          São Luis - Maranhão
-        </Data>
+        {user.company && (
+          <Data>
+            <MdWork size={20} />
+            {user.company}
+          </Data>
+        )}
+        {user.location && (
+          <Data>
+            <MdLocationCity size={20} />
+            {user.location}
+          </Data>
+        )}
         <Data>
           <MdLink size={20} />
-          <a href="https://avatars.githubusercontent.com/u/84647446?v=4">
-            Image.com
-          </a>
+          <a href="https://ruannynoleto.vercel.app/">Portfolio</a>
         </Data>
       </Inner>
     </Container>
   );
 }
+Profile.propTypes = {
+  user: PropTypes.shape({
+    login: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    avatar_url: PropTypes.string.isRequired,
+    followers: PropTypes.number.isRequired,
+    following: PropTypes.number.isRequired,
+    company: PropTypes.string.isRequired,
+    blog: PropTypes.string,
+    location: PropTypes.string,
+  }).isRequired,
+};
 
 export default Profile;

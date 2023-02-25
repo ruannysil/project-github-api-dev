@@ -34,7 +34,7 @@ export const Login = styled.h1`
 `;
 
 export const Name = styled.h2`
-  font-size: ${(props) => props.theme.fontSizes.subtitle};
+  font-size: ${(props) => props.theme.fontSizes.normal};
   font-weight: normal;
 
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
