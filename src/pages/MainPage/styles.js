@@ -2,6 +2,16 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 50, 0.5),
+      rgba(0, 0, 50, 0.6)
+    ),
+    url(https://github.blog/wp-content/uploads/2020/12/102393310-07478b80-3f8d-11eb-84eb-392d555ebd29.png?fit=1200%2C630);
+  background-position: center;
+  background-repeat: repeat;
+  background-clip: border-box;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +22,7 @@ export const Container = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 130px;
+  width: 170px;
 `;
 
 export const Title = styled.h1`

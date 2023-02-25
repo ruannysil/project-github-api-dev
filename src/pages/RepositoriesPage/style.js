@@ -31,7 +31,7 @@ export const Main = styled.section`
   background: ${(props) => props.theme.colors.container};
   width: 100%;
   height: 100vh;
-  padding: 40px;
+  padding: 18px 40px;
   overflow-y: hidden;
 
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
