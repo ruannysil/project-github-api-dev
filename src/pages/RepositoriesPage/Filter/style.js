@@ -39,7 +39,7 @@ export const Selector = styled.button`
     border-radius: 20px;
     &:hover,
     &.selected {
-      transform: translateX(0) scale(102);
+      transform: translateX(0) scale(1.1);
     }
   }
 `;
